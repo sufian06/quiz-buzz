@@ -1,38 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Blog from "../Blog/Blog";
-import Statistics from "../Statistics/Statistics";
-import Topics from "../Topics/Topics";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
-  return (
-    <div className="shadow-lg">
-      <nav className="flex justify-between items-center h-16 max-w-7xl mx-auto">
-        <div className="logo text-2xl font-semibold inline-block">
-          <Link to="/">Quiz Buzz</Link>
+    return (
+        <div className='shadow-lg'>
+            <div className='flex justify-between max-w-7xl mx-auto h-14 items-center'>
+            <div className="logo text-2xl font-semibold">
+                <Link to='/'>Quiz Buzz</Link>
+            </div>
+            <nav>
+                <ul>
+                    <Link className='ml-6 font-semibold' to='/'>Home</Link>
+                    {/* <Link className='ml-6 font-semibold' to='/topics'>Topics</Link> */}
+                    <Link className='ml-6 font-semibold' to='/statistics'>Statistics</Link>
+                    <Link className='ml-6 font-semibold' to='/blog'>Blog</Link>
+                </ul>
+            </nav>
         </div>
-        <div className="navbar">
-          <ul className="flex">
-            <li className="font-semibold inline-block">
-              <Link to="/topics">
-                <Topics />
-              </Link>
-            </li>
-            <li className="font-semibold inline-block ml-4">
-              <Link to="/statistics">
-                <Statistics />
-              </Link>
-            </li>
-            <li className="font-semibold inline-block ml-4">
-              <Link to="/blog">
-                <Blog />
-              </Link>
-            </li>
-          </ul>
         </div>
-      </nav>
-    </div>
-  );
+    );
 };
 
 export default Nav;

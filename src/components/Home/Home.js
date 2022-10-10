@@ -1,20 +1,16 @@
-import React from "react";
-import { useLoaderData } from "react-router-dom";
-import AllQuiz from "../AllQuiz/AllQuiz";
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Topics from '../Topics/Topics';
 
 const Home = () => {
-  const allQuiz = useLoaderData();
-  const allQuizData = allQuiz.data;
-  console.log(allQuiz.data);
-  return (
-    <div>
-      <div className="grid grid-cols-4 gap-5">
-        {allQuizData.map((quiz) => (
-          <AllQuiz key={quiz.id} quiz={quiz} />
-        ))}
-      </div>
-    </div>
-  );
+    const topicsData = useLoaderData().data;
+    return (
+        <div className='grid grid-cols-4 max-w-7xl mx-auto mt-16 gap-7'>
+         {
+            topicsData.map(topic => <Topics key={topic.id} topic={topic} />)
+         }
+        </div>
+    );
 };
 
 export default Home;
