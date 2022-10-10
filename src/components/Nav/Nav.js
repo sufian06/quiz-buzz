@@ -6,30 +6,32 @@ import Topics from "../Topics/Topics";
 
 const Nav = () => {
   return (
-    <nav className="flex justify-between">
-      <div className="logo">
-        <Link to="/">Quiz Buzz</Link>
-      </div>
-      <div className="navbar">
-        <ul className="flex">
-          <li>
-            <Link to="/topics">
-              <Topics />
-            </Link>
-          </li>
-          <li>
-            <Link to="/statistics">
-              <Statistics />
-            </Link>
-          </li>
-          <li>
-            <Link to="/blog">
-              <Blog />
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div className="shadow-lg">
+      <nav className="flex justify-between items-center h-16 max-w-7xl mx-auto">
+        <div className="logo text-2xl font-semibold inline-block">
+          <Link to="/">Quiz Buzz</Link>
+        </div>
+        <div className="navbar">
+          <ul className="flex">
+            <li className="font-semibold inline-block">
+              <Link to="/topics">
+                <Topics />
+              </Link>
+            </li>
+            <li className="font-semibold inline-block ml-4">
+              <Link to="/statistics">
+                <Statistics />
+              </Link>
+            </li>
+            <li className="font-semibold inline-block ml-4">
+              <Link to="/blog">
+                <Blog />
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 };
 

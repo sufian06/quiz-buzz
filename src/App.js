@@ -8,13 +8,25 @@ import Main from "./layouts/Main";
 
 function App() {
   const router = createBrowserRouter([
-    {path: '/', element: <Main />, children: [
-      {path: '/home', element: <Home />},
-      {path: '/topics', element: <Topics />},
-      {path: '/statistics', element: <Statistics />},
-      {path: '/blog', element: <Blog />},
-    ]}
-  ])
+    {
+      path: "/",
+      element: <Main />,
+      children: [
+        {
+          path: "/",
+          loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
+          element: <Home />,
+        },
+        {
+          path: "/home",
+          element: <Home />,
+        },
+        { path: "/topics", element: <Topics /> },
+        { path: "/statistics", element: <Statistics /> },
+        { path: "/blog", element: <Blog /> },
+      ],
+    },
+  ]);
   return (
     <div>
       <RouterProvider router={router} />
