@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const QuizCard = ({topic}) => {
-    const { id, logo, name } = topic;
-    return (
-        <div>
+const QuizCard = ({ topic }) => {
+  const { logo, name } = topic;
+  return (
+    <div>
       <div className="border p-4 rounded-md">
         <img className="bg-slate-200 rounded" src={logo} alt="" />
         <div className="flex justify-between items-center mt-6">
@@ -14,7 +14,7 @@ const QuizCard = ({topic}) => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default QuizCard;
