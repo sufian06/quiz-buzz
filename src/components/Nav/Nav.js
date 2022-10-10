@@ -11,7 +11,7 @@ const Nav = () => {
             <nav>
                 <ul>
                     <Link className='ml-6 font-semibold' to='/'>Home</Link>
-                    {/* <Link className='ml-6 font-semibold' to='/topics'>Topics</Link> */}
+                    <Link className='ml-6 font-semibold' to='/topics'>Topics</Link>
                     <Link className='ml-6 font-semibold' to='/statistics'>Statistics</Link>
                     <Link className='ml-6 font-semibold' to='/blog'>Blog</Link>
                 </ul>
