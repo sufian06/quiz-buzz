@@ -12,7 +12,7 @@ const SingleQuiz = ({ quiz }) => {
       </div>
       <div className="grid grid-cols-2 gap-4">
         {options.map((option, idx) => (
-          <Checkbox key={idx} option={option} />
+          <Checkbox key={idx} option={option} correctAnswer={correctAnswer} />
         ))}
       </div>
       <p>{correctAnswer}</p>
