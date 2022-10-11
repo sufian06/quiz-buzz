@@ -6,6 +6,7 @@ const Quiz = () => {
     console.log((quizes));
     return (
         <div className='max-w-7xl mx-auto mt-10'>
+            <h2>Quiz of </h2>
             {quizes.map(quiz => <SingleQuiz key={quiz.id} quiz={quiz} />)}
             
         </div>
