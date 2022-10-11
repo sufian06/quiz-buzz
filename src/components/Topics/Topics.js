@@ -1,19 +1,17 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import Question from "../Question/Question";
-const Topics = () => {
-  const topicsData = useLoaderData().data;
-  console.log(topicsData)
-  const {logo, questions} = topicsData;
+import SingleTopic from "../SingleTopic/SingleTopic";
 
+const Topics = () => {
+  const topics = useLoaderData().data;
+  // console.log(topics);
   return (
-    <div>
-        <div className="max-w-7xl mx-auto">
-            <img className="w-24" src={logo} alt="" />
-            {
-                questions.map(q => <Question key={q.id} q={q} />)
-            }
-        </div>
+    <div className="max-w-7xl mx-auto mt-20">
+      <div className="grid grid-cols-4 gap-5">
+        {topics.map((topic) => (
+          <SingleTopic key={topic.id} topic={topic} />
+        ))}
+      </div>
     </div>
   );
 };
