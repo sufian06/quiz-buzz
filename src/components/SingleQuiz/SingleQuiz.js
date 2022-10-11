@@ -1,21 +1,29 @@
 import { EyeIcon } from '@heroicons/react/24/solid';
 import React from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Checkbox from "../Checkbox/Checkbox";
+
 
 const SingleQuiz = ({ quiz }) => {
   const { question, options, correctAnswer } = quiz;
+
+    const handleCheckAnswer = () => {
+        toast(`Correct Ans: ${correctAnswer}`);
+    }
+
   return (
     <div className="border p-5 mb-3">
       <div className='flex justify-between'>
       <div className="font-bold mb-4">Question: {question}</div>
-      <button><EyeIcon className="h-6 w-6 text-slate-500"/></button>
+      <button onClick={handleCheckAnswer}><EyeIcon className="h-6 w-6 text-slate-500"/></button>
       </div>
       <div className="grid grid-cols-2 gap-4">
         {options.map((option, idx) => (
           <Checkbox key={idx} option={option} correctAnswer={correctAnswer} />
         ))}
       </div>
-      <p>{correctAnswer}</p>
+      <ToastContainer position="top-center" />
     </div>
   );
 };
