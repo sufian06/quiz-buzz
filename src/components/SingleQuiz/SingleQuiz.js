@@ -13,8 +13,8 @@ const SingleQuiz = ({ quiz }) => {
 
   return (
     <div className="border rounded-md p-5 mb-6">
-      <div className="flex justify-between bg-violet-200 p-4 mb-4 rounded-md">
-        <div className="font-bold mb-4">Question: {question}</div>
+      <div className="flex justify-between bg-violet-200 p-6 mb-4 rounded-md">
+        <div className="font-bold">Quiz: {question}</div>
         <button onClick={handleCheckAnswer}>
           <EyeIcon className="h-6 w-6 text-slate-600" />
         </button>

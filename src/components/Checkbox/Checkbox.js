@@ -7,7 +7,7 @@ const Checkbox = ({ option, correctAnswer }) => {
     if (option === correctAnswer) {
       toast.success("Correct Answer");
     } else {
-      toast("Ans not Correct");
+      toast("Answer is not Correct");
     }
   };
   return (
