@@ -2,9 +2,9 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div>
+    <div className="mt-28">
       <div className="max-w-7xl mx-auto mt-10">
-        <div className="bg-blue-300 p-4">
+        <div className="bg-blue-200 p-4">
           <h3 className="font-bold mb-2">
             Question 1: what is the purpose of react-router?
           </h3>
@@ -16,7 +16,7 @@ const Blog = () => {
             user will be redirected to that particular route.
           </p>
         </div>
-        <div className="bg-violet-300 p-4">
+        <div className="bg-violet-100 p-4">
           <h3 className="font-bold mb-2">
             Question 2: How does context api works?
           </h3>

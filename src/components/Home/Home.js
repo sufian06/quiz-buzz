@@ -3,10 +3,10 @@ import Topics from "../Topics/Topics";
 
 const Home = () => {
   return (
-    <div>
+    <div className="mb-24 mt-28">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mt-12">
-          <div>
+        <div className="flex justify-between flex-col-reverse lg:flex-row items-center mt-12">
+          <div className="mt-7 lg:mt-0">
           <h2 className="text-3xl font-bold mb-4">Quiz Buzz is a quiz app.</h2>
           <p className="font-semibold">Whether you need to create an online quiz app for your classroom or just for fun, <br /> get started with us</p>
           </div>
