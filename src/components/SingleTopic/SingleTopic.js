@@ -18,7 +18,7 @@ const SingleTopic = ({ topic }) => {
             <h3 className="font-semibold">Total Quiz: {total}</h3>
           </div>
           <button className="bg-violet-500 hover:bg-violet-400 text-slate-100 py-1 px-4 font-semibold rounded-md">
-            <Link to={`/topics/${id}`}>Start Quiz</Link>
+            <Link to={`/quiz/${id}`}>Start Quiz</Link>
           </button>
         </div>
       </div>
