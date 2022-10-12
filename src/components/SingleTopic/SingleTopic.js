@@ -1,7 +1,5 @@
-import React, { createContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-
-export const NameContext = createContext();
 
 const SingleTopic = ({ topic }) => {
   const { name, id, total, logo } = topic;

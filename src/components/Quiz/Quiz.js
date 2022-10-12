@@ -1,12 +1,8 @@
-import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import SingleQuiz from "../SingleQuiz/SingleQuiz";
-import { NameContext } from "../SingleTopic/SingleTopic";
 
 const Quiz = () => {
   const quizes = useLoaderData().data.questions;
-  const name = useContext(NameContext);
-  console.log(name)
   return (
     <div className="mt-28">
       <div className="max-w-7xl mx-auto mt-10">
