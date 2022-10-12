@@ -1,6 +1,6 @@
-# App Name
+# `App Name`
 
-#`Quiz Buzz`
+# Quiz Buzz
 
 ## netlify live website link
 
@@ -15,4 +15,4 @@ set quiz and options.\
 made line chart for the number of quiz.\
 I have used tailwindcss for style\
 I also used rechart @ toastify\
-handle netlify reload 404 page\
+handle netlify reload 404 page
